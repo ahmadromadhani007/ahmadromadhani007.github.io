@@ -13,7 +13,7 @@
     <header class="l-header">
         <nav class="nav bd-grid">
             <div>
-                <a href="#" class="nav__logo">Ahmad Romadhani</a>
+                <a href="#" class="nav__logo">www.armonictech.com</a>
             </div>
 
             <div class="nav__menu" id="nav-menu">
@@ -43,9 +43,9 @@
                     </span>
                 </h3>
                 <p class="home__description">
-                    <span class="home__title-color">Network Programming</span><br>
+                    <span class="home__title-color">Network Engineering</span><br>
                     Data Science<br>
-                    <span class="home__title-color">Web Developer</span>
+                    <span class="home__title-color">Web Development</span>
                 </p>
             </div>
             <div class="home__social">
@@ -84,13 +84,13 @@
                     
                 <div>
                     <h2 class="about__subtitle">Ahmad Romadhani, S.Kom., M.Kom.</h2>
-                    <p class="about__text" style="text-align: justify;">I am Ahmad Romadhani, a Bachelor of Informatics Engineering in majoring Information Technology at University of Nurul Jadid, and Master Study of Computer Science, Maulana Malik Ibrahim State Islamic University Malang. I am dedicated professional
-                        with a passion for Web Developer, Network Engineering, and Data Science. In my role as a network programmer and data scientist. I leverage my skills to design, implement, and
+                    <p class="about__text" style="text-align: justify;">I am Ahmad Romadhani, a Bachelor of Informatics Engineering in majoring Information Technology at University of Nurul Jadid, and Master Study of Computer Science, Maulana Malik Ibrahim State Islamic University Malang. I am a Lecture at Mandala Institute of Technology and Science, and I dedicated professional
+                        with a passion for Web Development, Network Engineering, and Data Science. In my role as a network programmer and data scientist. I leverage my skills to design, implement, and
                         optimize communication protocols that enable seamless data exchange between devices and systems.
                         Proficient in languages like Python, JavaScript, and Php, I thrive on creating robust and
                         efficient network solutions. Whether it's developing server-client applications, implementing
                         socket
-                        programming, or troubleshooting network issues, I am committed to staying at the forefront of
+                        Engineering, or troubleshooting network issues, I am committed to staying at the forefront of
                         technological advancements in networking. With a keen eye for detail and a problem-solving
                         mindset, I strive to contribute to the development of reliable and secure network
                         infrastructures that power today's interconnected world.</p>
@@ -105,9 +105,9 @@
             <div class="skills__container bd-grid">
                 <div>
                     <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text" style="text-align: justify;">I possess a strong set of professional skills
-                        in web development and
-                        network programming. I have experience working as a Full-Time Laboratory Computer Asistant Technical Faculty at University of Nurul Jadid. I have completed an internship as a Network Programming at PT Ministry of Communication and Informatics Digital Talent Scholarship Indonesia. Apart from understanding the implementation of IT Support Google at Coursera Inc, I am proficient in various technologies such as Cisco Packet Tracer, MiroTik Routers, Python, Linux, DevNet, DevOps, PHP (Laravel), Javascript (Node.js), and Microsoft Office.</p>
+                    <p class="skills__text" style="text-align: justify;"> I possess a strong set of professional skills
+                        in data science, web development and
+                        network engineering. I have experience working as a Full-Time Laboratory Computer Asistant Technical Faculty at University of Nurul Jadid. I have completed an internship as a Network Engineering at PT Ministry of Communication and Informatics Digital Talent Scholarship Indonesia. Apart from understanding the implementation of IT Support Google at Coursera Inc, I am proficient in various technologies such as Cisco Packet Tracer, MiroTik Routers, Python, Linux, DevNet, DevOps, PHP (Laravel), Javascript (Node.js), and Microsoft Office.</p>
                     </div>
                 <div>
                     <img src="work7.jpg" alt="" class="skills__img">
@@ -141,24 +141,55 @@
             </div>
         </section>
 
-        <!--===== CONTACT =====-->
-        <section class="contact section" id="contact">
-            <h2 class="section-title">Contact</h2>
+<!--===== CONTACT =====-->
+<section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
 
-            <div class="contact__container bd-grid">
-                <form action="" class="contact__form">
-                    <input type="text" placeholder="Name" class="contact__input">
-                    <input type="mail" placeholder="Email" class="contact__input">
-                    <textarea name="" id="" cols="0" rows="10" class="contact__input"></textarea>
-                    <input type="button" value="Send" class="contact__button button">
-                </form>
-            </div>
-        </section>
+    <div class="contact__container bd-grid">
+        <form class="contact__form" onsubmit="sendEmail(event)">
+            
+            <input type="text" id="name" placeholder="Name" 
+                   class="contact__input" required>
+
+            <input type="email" id="email" placeholder="Email" 
+                   class="contact__input" required>
+
+            <textarea id="message" rows="10" 
+                      class="contact__input" 
+                      placeholder="Your Message" required></textarea>
+
+            <button type="submit" class="contact__button button">
+                Send
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<script>
+function sendEmail(event) {
+    event.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+
+    var mailtoLink = "mailto:dhani@itsm.ac.id"
+        + "?subject=Pesan dari Website ArmonicTech"
+        + "&body="
+        + "Nama: " + encodeURIComponent(name) + "%0D%0A"
+        + "Email: " + encodeURIComponent(email) + "%0D%0A%0D%0A"
+        + "Pesan: " + encodeURIComponent(message);
+
+    window.location.href = mailtoLink;
+}
+</script>
+
     </main>
 
     <!--===== FOOTER =====-->
     <footer class="footer">
-        <p class="footer__title">Ahmad Romadhani</p>
+        <p class="footer__title">www.armonictech.com</p>
         <div class="footer__social">
             <a href="#" class="footer__icon"><i class='bx bxl-facebook'></i></a>
             <a href="https://www.instagram.com/ArmonicTech/" class="footer__icon" target="_blank"><i
